@@ -20,4 +20,8 @@ INSERT INTO Emp_Details VALUES (1009,'F','SS@yahu.com',100)
 
 --Solution
 
-select * from Emp_Details
+select DeptID,STRING_AGG(EmailID,';') EmailList from Emp_Details
+group by DeptID
+
+--doc link of String_Agg 
+--https://www.sqlshack.com/string_agg-function-in-sql/
